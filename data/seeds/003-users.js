@@ -1,0 +1,40 @@
+exports.seed = function (knex) {
+  return knex("users").insert([
+    {
+      name: "zac",
+      job_title: "boss",
+      email: "zac@mail.com",
+      phone_number: 01234567,
+      address: "123 fake st",
+      city: "kansas",
+      state: "michigan",
+      country: "murica",
+      resume: "https://stackoverflow.com/",
+      role_id: 1,
+    },
+    {
+      name: "mel",
+      job_title: "software engineer",
+      email: "mel@mail.com",
+      phone_number: 01234566,
+      address: "123 fake st",
+      city: "kansas",
+      state: "michigan",
+      country: "murica",
+      resume: "https://stackoverflow.com/",
+      role_id: 2,
+    },
+    {
+      name: "jeff",
+      job_title: "software engineer",
+      email: "jeff@mail.com",
+      phone_number: 01234565,
+      address: "123 fake st",
+      city: "kansas",
+      state: "michigan",
+      country: "murica",
+      resume: "https://stackoverflow.com/",
+      role_id: 3,
+    },
+  ]);
+};
