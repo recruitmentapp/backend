@@ -15,7 +15,9 @@ function add(user) {
 }
 
 function find() {
-  return db("users").select("id", "email").orderBy("id");
+  return db("users")
+    .select("id", "name", "email", "job_title", "city", "state", "country")
+    .orderBy("id");
 }
 
 function findBy(filter) {
