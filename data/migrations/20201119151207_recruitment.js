@@ -20,6 +20,7 @@ exports.up = function (knex) {
       users.string("name", 128).notNullable().unique();
       users.string("job_title", 128).notNullable();
       users.string("email", 128).notNullable().unique();
+      users.string("password", 128).notNullable();
       users.integer("phone_number", 15).notNullable().unique();
       users.string("address", 128).notNullable();
       users.string("city", 128).notNullable();
