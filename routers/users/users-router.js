@@ -11,14 +11,9 @@ router.get("/", (req, res) => {
 });
 
 router.get("/:id", (req, res) => {
-  const id = req.params.id;
-  Classes.findByUserId(id)
-    .then((classes) => {
-      Users.findById(id)
-        .then((users) => {
-          res.status(200).json({ ...users, classes });
-        })
-        .catch((err) => res.send(err));
+  Users.findById(req.params.id)
+    .then((user) => {
+      res.status(200).json(user);
     })
     .catch((err) => res.send(err));
 });
